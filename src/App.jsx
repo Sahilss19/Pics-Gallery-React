@@ -7,16 +7,17 @@ import Saved from './components/Saved';
 
 const App = () => {
   const [Images, setImages] = useState([]);
+  const [search, setsearch] = useState("cars"); 
   const API_KEY = "hb8MPopChrmSumnGThlEYVAOQBdIgfJzrnI02W1T4bwcp6EFeND9xWNf";
 
   useEffect(() => {
     const fetchImage = async () => {
       try {
         const res = await axios.get(
-          `https://api.pexels.com/v1/search?query=nature&per_page=80`,
+          `https://api.pexels.com/v1/search?query=${search}&per_page=80`,
           {
             headers: {
-              Authorization: API_KEY,
+              Authorization: API_KEY, 
             },
           }
         );
@@ -26,13 +27,13 @@ const App = () => {
       }
     };
     fetchImage();
-  }, []); 
+  }, [search]); //as a dependency pass kiya hai
 
   console.log("Images:", Images);
 
   return (
     <Router>
-      <Navbar />
+      <Navbar setsearch={setsearch}/>
       <Routes>
         <Route path="/" element={<Home Images={Images} />} />
         <Route path="/saved" element={<Saved />} />

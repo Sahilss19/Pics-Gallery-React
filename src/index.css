@@ -3,6 +3,10 @@ body{
   color: white;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* navbar */
 .navbar{
   display: flex;
@@ -33,4 +37,12 @@ body{
   height: auto;
   object-fit: cover ;
   display: inline-block;
+  border-radius: 13px;
+  border: 2px solid rgb(464,257,225);
+  transition: transform 0.7s ease;
+}
+
+.flex .items img:hover{
+  transform: scale(1.15);
+  border: 2px solid black;
 }
