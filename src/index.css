@@ -40,9 +40,19 @@ body::-webkit-scrollbar {
   border-radius: 13px;
   border: 2px solid rgb(464,257,225);
   transition: transform 0.7s ease;
+  cursor: pointer;
 }
 
 .flex .items img:hover{
   transform: scale(1.15);
   border: 2px solid black;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img img{
+  width: 450px;
 }
