@@ -109,7 +109,7 @@ const Navbar = ({ setsearch }) => {
           onClick={() => {setsearch("Laptop")
             navigate("/")
           }}
-        >``
+        >
           Laptop
         </div>
 
