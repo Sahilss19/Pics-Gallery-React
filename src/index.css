@@ -56,3 +56,11 @@ body::-webkit-scrollbar {
 .img img{
   width: 450px;
 }
+
+.form-control{
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+

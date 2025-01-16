@@ -1,6 +1,5 @@
 import React from 'react';
 import Loader from './Loader';
-import useLocation from 'react-router-dom';
 
 const Saved = ({saved , loader}) => {
 
