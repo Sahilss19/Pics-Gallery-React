@@ -131,7 +131,8 @@ const Navbar = ({ setsearch }) => {
         )}
       </div>
 
-      <div className="container my-4" style={{ width: "780px" }}>
+      <div className="container my-4" style={{ maxWidth: "780px", width: "100%" }}>
+
 
       {location.pathname=== '/' && (    //home pr honge tbhi search bar dikhao baaki mt dikaho
         <div className="mb-3">
